@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend
 
-## Getting Started
+The web app where players read riddles and submit their answers.
 
-First, run the development server:
+Uses wagmi hooks to read from the contract and send transactions. RainbowKit handles all the wallet connection logic.
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open <http://localhost:3000>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 14 with App Router
+- wagmi v2 + viem for blockchain interactions
+- RainbowKit for the connect button
+- Tailwind for styling
 
-## Learn More
+## Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+Optional for production:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=xxx
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Get a WalletConnect project ID at <https://dashboard.reown.com/>
 
-## Deploy on Vercel
+The contract address is hardcoded in `app/abi/OnchainRiddle.ts`. Update it there if you deploy your own contract.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push to main and Vercel handles the rest. No config needed.
