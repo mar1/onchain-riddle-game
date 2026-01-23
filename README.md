@@ -4,6 +4,10 @@ A riddle game running entirely on-chain. Players connect their wallet, submit an
 
 Built for Zama's DevRel challenge.
 
+## Video Tutorial
+
+<https://youtu.be/YC1umAx-_d8>
+
 ## Try it
 
 - Play: <https://riddle.mar1.dev>
