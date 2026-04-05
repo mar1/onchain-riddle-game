@@ -2,8 +2,6 @@
 
 A riddle game running entirely on-chain. Players connect their wallet, submit answers, and if they get it right, they win. A bot watches for winners and automatically posts the next riddle.
 
-Built for Zama's DevRel challenge.
-
 ## Video Tutorial
 
 <https://youtu.be/YC1umAx-_d8>
